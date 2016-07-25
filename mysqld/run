@@ -1,0 +1,9 @@
+#!/bin/sh
+exec 2>&1
+exec /usr/libexec/mysqld \
+--basedir=/usr \
+--datadir=/var/lib/mysql \
+--pid-file=/var/run/mysqld/mysqld.pid \
+--socket=/var/lib/mysql/mysql.sock \
+--skip-locking \
+--user=mysql 
